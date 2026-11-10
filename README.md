@@ -1,6 +1,6 @@
 <!-- Banner animado de Elden Ring -->
 <p align="center">
-  <img src="https://media.giphy.com/media/g2onDlYL88KWFCJKlR/giphy.gif" width="820" alt="Animação de Elden Ring" />
+  <img src="https://media.giphy.com/media/g2onDlYL88KWFCJKlR/giphy.gif" width="400" alt="Animação de Elden Ring" />
 </p>
 
 <h1 align="center">🎵 Sistema Musical V2</h1>
