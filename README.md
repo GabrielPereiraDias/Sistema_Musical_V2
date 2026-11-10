@@ -1,66 +1,129 @@
-<!-- Banner animado de Elden Ring -->
+<!-- Banner animado -->
 <p align="center">
-  <img src="https://media.giphy.com/media/g2onDlYL88KWFCJKlR/giphy.gif" width="400" alt="Animação de Elden Ring" />
+  <img src="https://media.giphy.com/media/g2onDlYL88KWFCJKlR/giphy.gif" width="400" alt="Elden Ring" />
 </p>
 
 <h1 align="center">🎵 Sistema Musical V2</h1>
 
 <p align="center">
-  <strong>Um projeto acadêmico voltado à organização e ao gerenciamento de informações do universo musical.</strong>
+  <strong>Uma biblioteca musical para cadastrar, organizar e explorar músicas e artistas.</strong>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Projeto-Acadêmico-8b5cf6?style=for-the-badge" alt="Projeto acadêmico" />
-  <img src="https://img.shields.io/badge/Versão-2.0-64748b?style=for-the-badge" alt="Versão 2.0" />
-  <img src="https://img.shields.io/badge/Status-Em%20desenvolvimento-f59e0b?style=for-the-badge" alt="Em desenvolvimento" />
+  <img src="https://img.shields.io/badge/PHP-Backend-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/MySQL-Banco_de_dados-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
+  <img src="https://img.shields.io/badge/CSS-Estilização-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS" />
+  <img src="https://img.shields.io/badge/Status-Projeto_acadêmico-8b5cf6?style=for-the-badge" alt="Projeto acadêmico" />
 </p>
 
 ---
 
-## 📖 Sobre o projeto
+## 🎧 Sobre o projeto
 
-O **Sistema Musical V2** é um projeto desenvolvido com a proposta de aplicar conhecimentos de desenvolvimento de sistemas em uma solução relacionada ao gerenciamento de informações musicais.
+O **Sistema Musical V2** é uma aplicação web desenvolvida para gerenciar uma biblioteca de músicas e artistas. O sistema permite manter os registros organizados em um banco de dados e acessar as principais informações por meio de uma interface simples e intuitiva.
 
-A ideia é reunir informações em um ambiente organizado, facilitando o cadastro, a consulta e a manutenção dos dados que fazem parte do sistema.
+O projeto reúne conceitos de desenvolvimento back-end, integração com banco de dados, operações CRUD, autenticação de usuários e manipulação de arquivos.
 
-Esta versão representa a evolução do projeto, com foco na estruturação e no aprimoramento da solução.
+## ✨ Funcionalidades
 
-## 🎯 Objetivos
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🎤 Gerenciamento de artistas</h3>
+      Cadastro, edição, listagem e exclusão de artistas, com nome, gênero, país e foto.
+    </td>
+    <td width="50%">
+      <h3>🎼 Gerenciamento de músicas</h3>
+      Cadastro e edição de músicas com título, álbum, gênero, letra, artista relacionado e capa.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🔎 Biblioteca com filtros</h3>
+      Pesquisa por título, álbum ou artista, além de filtros por artista e gênero musical.
+    </td>
+    <td width="50%">
+      <h3>▶️ Integração com YouTube</h3>
+      Armazenamento de links de vídeos e acesso às músicas diretamente pelo YouTube.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🔐 Login e sessões</h3>
+      Autenticação de usuários e proteção das páginas internas para usuários logados.
+    </td>
+    <td width="50%">
+      <h3>🖼️ Upload de imagens</h3>
+      Envio de fotos de artistas e capas de músicas, com validação e redimensionamento.
+    </td>
+  </tr>
+</table>
 
-- Desenvolver uma aplicação com foco no contexto musical;
-- Organizar informações de forma clara e estruturada;
-- Praticar conceitos de programação e desenvolvimento de sistemas;
-- Aplicar conhecimentos adquiridos durante as atividades do curso.
+## 🛠️ Tecnologias utilizadas
 
-## ⚙️ Funcionalidades
+| Tecnologia | Aplicação no projeto |
+|:--|:--|
+| **PHP** | Regras do sistema, formulários, autenticação e operações CRUD |
+| **MySQL** | Armazenamento de usuários, artistas e músicas |
+| **HTML5** | Estrutura das páginas |
+| **CSS3** | Layout, componentes e identidade visual |
+| **MySQLi** | Comunicação entre PHP e banco de dados |
+| **Biblioteca GD** | Processamento e redimensionamento das imagens |
 
-As funcionalidades específicas dependem da implementação presente no código-fonte. A proposta geral do projeto envolve o gerenciamento de informações musicais, como:
+## 🗂️ Estrutura do projeto
 
-- Cadastro e organização de dados;
-- Consulta de informações registradas;
-- Atualização e manutenção dos registros.
+```
+Sistema_Musical_V2/
+│
+├── README.md
+│
+└── Sistema_Musical_V2/
+    ├── bd.sql
+    ├── conexao.php
+    ├── index.php
+    ├── login.php
+    ├── logout.php
+    ├── valida_sessao.php
+    ├── geraSenha.php
+    ├── cadastro_artista.php
+    ├── cadastro_musica.php
+    ├── listagem_musicas.php
+    └── styles.css
+```
 
-> **Observação:** esta documentação apresenta a proposta geral do projeto. Os recursos e tecnologias exatos devem ser ajustados conforme a implementação final.
+## 🗃️ Banco de dados
 
-## 🛠️ Tecnologias
+O banco utilizado se chama `sistema_musical_v2` e possui três tabelas principais:
 
-As tecnologias utilizadas devem ser identificadas de acordo com os arquivos e ferramentas presentes na versão final do projeto.
+- **usuarios:** armazena os dados de acesso;
+- **artistas:** guarda informações dos artistas;
+- **musicas:** registra as músicas e seu relacionamento com os artistas.
+
+O script de criação está disponível em `Sistema_Musical_V2/bd.sql`.
+
+## 🔒 Segurança e validações
+
+O projeto utiliza consultas preparadas (*prepared statements*) para operações com o banco, verificação de senha com hash, controle de sessão e validação dos arquivos de imagem enviados.
+
+> **Atenção:** as credenciais configuradas em `conexao.php` são específicas do ambiente de desenvolvimento. Altere-as para o seu ambiente e não publique senhas reais no repositório.
 
 ## 🏫 Contexto acadêmico
 
-Projeto desenvolvido no contexto das atividades do curso de **Desenvolvimento de Sistemas**.
+Projeto desenvolvido como atividade do curso de **Desenvolvimento de Sistemas**.
 
 <p align="center">
-  <strong>SENAI A. Jacob Lafer</strong><br/>
-  Turma: 1ID-DS
+  <strong>SENAI A. Jacob Lafer</strong><br />
+  Turma: <strong>1ID-DS</strong>
 </p>
 
 ## 👨‍💻 Autor
 
-**Gabriel Pereira Dias**
+<p align="center">
+  <strong>Gabriel Pereira Dias</strong>
+</p>
 
 ---
 
 <p align="center">
-  Feito com dedicação, código e um pouco de música. 🎧
+  <i>Organizando músicas, artistas e ideias em um só lugar.</i> 🎶
 </p>
